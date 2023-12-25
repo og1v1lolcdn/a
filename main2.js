@@ -7195,7 +7195,7 @@ var UnityModule = (function() {
                     var datalength = Number(xhr.getResponseHeader("Content-length"));
                     var header;
                     var hasByteServing = (header = xhr.getResponseHeader("Accept-Ranges")) && header === "bytes";
-                    var usesGzip = (header = xhr.getResponseHeader("Content-Encoding")) && header === "gzip";
+                    var usesGzip = true;
                     var chunkSize = 1024 * 1024;
                     if (!hasByteServing)
                         chunkSize = datalength;
